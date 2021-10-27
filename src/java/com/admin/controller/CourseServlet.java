@@ -65,7 +65,7 @@ public class CourseServlet extends HttpServlet {
         } else if ("Delete".equalsIgnoreCase(action)) {
             courseDao.deleteCurso(codigo_curso);
         } else if ("Search".equalsIgnoreCase(action)) {
-            courseDao.getCurso(codigo_curso);
+            curso = courseDao.getCurso(codigo_curso);
         }
         request.setAttribute("curso", curso);
         request.setAttribute("AllCourse", courseDao.getAllCurso());

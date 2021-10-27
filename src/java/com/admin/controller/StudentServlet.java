@@ -50,7 +50,7 @@ public class StudentServlet extends HttpServlet {
         } else if ("Delete".equalsIgnoreCase(action)) {
             studentDao.deleteStudent(studentId);
         } else if ("Search".equalsIgnoreCase(action)) {
-            studentDao.getStudent(studentId);
+            student = studentDao.getStudent(studentId);
         }
         request.setAttribute("student", student);
         request.setAttribute("AllStudents", studentDao.getAllStudents());
